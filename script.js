@@ -10,6 +10,14 @@ const weapons = []
 const swordRoom = document.getElementById('sword-room')
 const swordFight = document.getElementById('sword-fight')
 
+const slingshotRoom = document.getElementById('slingshot-room')
+const slingshotFight = document.getElementById('slingshot-fight')
+
+const winningRoom = document.getElementById('winning-room')
+const loosingRoom = document.getElementById('loosing-room')
+const playAgainWinning = document.getElementById('play-again-winning')
+const playAgainLoosing = document.getElementById('play-again-loosing')
+
 const result = document.getElementById('result')
 
 ready.addEventListener('click', function() {
@@ -45,4 +53,14 @@ swordFight.addEventListener('click', function() {
 slingshotFight.addEventListener('click', function() {
     slingshotRoom.style.display = 'none'
     loosingRoom.style.display = 'block'
+})
+
+playAgainWinning.addEventListener('click', function() {
+    resetGameState()
+  window.location.href = "index.html"
+})
+
+playAgainLoosing.addEventListener('click', function() {
+    resetGameState()
+    window.location.href = "index.html"
 })
