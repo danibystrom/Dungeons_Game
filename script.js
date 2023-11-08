@@ -7,6 +7,9 @@ const sword = document.getElementById('sword')
 const slingshot = document.getElementById('slingshot')
 const weapons = []
 
+const swordRoom = document.getElementById('sword-room')
+const swordFight = document.getElementById('sword-fight')
+
 const result = document.getElementById('result')
 
 ready.addEventListener('click', function() {
@@ -32,4 +35,9 @@ slingshot.addEventListener('click', function() {
     slingshotRoom.style.display = 'block'
     addWeapon('Slangbella')
     document.body.style.backgroundImage = "url('/images/dragon2.jpg')"
+})
+
+swordFight.addEventListener('click', function() {
+    swordRoom.style.display = 'none'
+    winningRoom.style.display = 'block'
 })
