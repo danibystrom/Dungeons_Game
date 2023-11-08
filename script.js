@@ -20,6 +20,8 @@ const playAgainLoosing = document.getElementById('play-again-loosing')
 
 const result = document.getElementById('result')
 
+loadGameState()
+
 ready.addEventListener('click', function() {
     start.innerHTML = '<h1>Snyggt! Välkommen till fängelsehålan.</h1>'
     firstRoom.style.display = 'block'
@@ -34,7 +36,6 @@ sword.addEventListener('click', function() {
     firstRoom.style.display = 'none'
     swordRoom.style.display = 'block' 
     addWeapon('Svärd')   
-    saveGameState()
     document.body.style.backgroundImage = "url('/images/dragon2.jpg')"
 })
 
@@ -57,10 +58,37 @@ slingshotFight.addEventListener('click', function() {
 
 playAgainWinning.addEventListener('click', function() {
     resetGameState()
-  window.location.href = "index.html"
+    window.location.href = "index.html"
 })
 
 playAgainLoosing.addEventListener('click', function() {
     resetGameState()
     window.location.href = "index.html"
 })
+
+function addWeapon(weapon) {
+    weapons.push(weapon)
+    console.log(weapons)
+}
+
+function addWeapon(weapon) {
+    weapons.push(weapon)
+    console.log(weapons)
+}
+
+function saveGameState() {
+    localStorage.setItem('gameState', JSON.stringify(weapons))
+}
+
+function loadGameState() {
+    const saveGameState = localStorage.getItem('gameState')
+    if(saveGameState) {
+        weapons.length = 0
+        weapons.push(...JSON.parse(saveGameState))
+    }
+}
+
+function resetGameState () {
+    localStorage.removeItem('gameState')
+    weapons.length = 0
+}
