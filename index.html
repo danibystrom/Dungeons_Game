@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Välkommen till Dungeons!</title>
 </head>
-<body>
+<body class="background">
     <div id="start">
         <h1>Välkommen till Dungeons!</h1>
         <p>Välkommen till "Dungeons", en värld fylld av gåtfulla skatter och dolda faror. I denna labyrint av förlorade gångar och skuggor, är du den utvalde hjälten som söker sitt öde. Drakens skugga sveper över landet, men du har hört viskningar om ett legendariskt vapen som kan sätta stopp för dess härjningar.</p>
@@ -16,6 +18,13 @@
 
         <button id="ready">Ja, jag är redo!</button>
         <button id="leave">Nej, jag vill gå hem..</button>
+    </div>
+
+    <div id="first-room" style="display: none;">
+        <p>Förändringens ögonblick närmar sig, äventyrare. Du har kommit till ett skrin, och insidan strålar med ett mystiskt sken. Där inne vilar två kraftfulla vapen, och du måste göra ditt val noggrant, för snart kommer du att behöva dess krafter i kampen mot draken.</p>
+
+        <button id="sword">Svärd</button>
+        <button id="slingshot">Slangbella</button>
     </div>
     
 </body>
