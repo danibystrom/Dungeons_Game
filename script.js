@@ -41,3 +41,8 @@ swordFight.addEventListener('click', function() {
     swordRoom.style.display = 'none'
     winningRoom.style.display = 'block'
 })
+
+slingshotFight.addEventListener('click', function() {
+    slingshotRoom.style.display = 'none'
+    loosingRoom.style.display = 'block'
+})
