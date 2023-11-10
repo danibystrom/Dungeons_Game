@@ -32,7 +32,18 @@ button {
     border-radius: 5%;
     font-size: large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
 
+button.sword-image {
+    background-image: url('images/sword.png');
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px;
+    background-color: transparent;
 }
 
 
