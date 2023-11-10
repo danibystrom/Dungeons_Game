@@ -36,6 +36,19 @@ button {
 
 button.sword-image {
     background-image: url('images/sword.png');
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px;
+    background-color: transparent;
+    transform: scaleX(-1);
+}
+
+button.slingshot-image {
+    background-image: url('images/slingshot.png');
     width: 150px;
     height: 150px;
     background-size: cover;
