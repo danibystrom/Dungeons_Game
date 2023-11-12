@@ -36,14 +36,12 @@
         firstRoom.style.display = 'none'
         swordRoom.style.display = 'block' 
         addWeapon('Svärd')   
-        document.body.style.backgroundImage = "url('/images/dragon2.jpg')"
     })
 
     slingshot.addEventListener('click', function() {
         firstRoom.style.display = 'none'
         slingshotRoom.style.display = 'block'
         addWeapon('Slangbella')
-        document.body.style.backgroundImage = "url('/images/dragon2.jpg')"
     })
 
     swordFight.addEventListener('click', function() {
