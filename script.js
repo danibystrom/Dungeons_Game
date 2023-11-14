@@ -1,3 +1,4 @@
+    document.addEventListener('DOMContentLoaded', function() {
     const start = document.getElementById('start')
     const ready = document.getElementById('ready')
     const leave = document.getElementById('leave')
@@ -90,3 +91,5 @@
         localStorage.removeItem('gameState')
         weapons.length = 0
     }
+
+})
