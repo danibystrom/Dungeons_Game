@@ -24,7 +24,6 @@
     loadGameState()
 
     ready.addEventListener('click', function() {
-        start.innerHTML = '<h1>Snyggt! Välkommen till fängelsehålan.</h1>'
         firstRoom.style.display = 'block'
     })
 
@@ -36,13 +35,15 @@
     sword.addEventListener('click', function() {
         firstRoom.style.display = 'none'
         swordRoom.style.display = 'block' 
-        addWeapon('Svärd')   
+        addWeapon('Svärd')  
+        saveGameState() 
     })
 
     slingshot.addEventListener('click', function() {
         firstRoom.style.display = 'none'
         slingshotRoom.style.display = 'block'
         addWeapon('Slangbella')
+        saveGameState()
     })
 
     swordFight.addEventListener('click', function() {
