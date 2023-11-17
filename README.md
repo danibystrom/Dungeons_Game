@@ -50,6 +50,6 @@ The game state is saved using local storage, allowing players to continue their 
 ### Author
 
 * __Daniela Byström__
-* [GitHub](https://github.com/danibystrom)
+* [GitHub](https://github.com/danibystrom/Dungeons_Game)
 
 Feel free to explore the code and customize the game further. Happy Adventuring!

@@ -1,4 +1,4 @@
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', main)
     const start = document.getElementById('start')
     const ready = document.getElementById('ready')
     const leave = document.getElementById('leave')
@@ -6,7 +6,7 @@
     const firstRoom = document.getElementById('first-room')
     const sword = document.getElementById('sword')
     const slingshot = document.getElementById('slingshot')
-    const weapons = []
+    let weapons = []
 
     const swordRoom = document.getElementById('sword-room')
     const swordFight = document.getElementById('sword-fight')
@@ -21,7 +21,10 @@
 
     const result = document.getElementById('result')
 
-    loadGameState()
+    function main() {
+        loadGameState()
+        saveGameState()
+    }
 
     ready.addEventListener('click', function() {
         firstRoom.style.display = 'block'
@@ -30,6 +33,7 @@
     leave.addEventListener('click', function() {
         start.innerHTML = '<h1>Du har avslutat spelet</h1>'
         result.innerHTML = "We're sad to see you go... Tack för att du urforskade Dungeons!"
+        document.body.style.backgroundImage = "url('/images/toothless.jpg')"
     })
 
     sword.addEventListener('click', function() {
@@ -71,20 +75,15 @@
         console.log(weapons)
     }
 
-    function addWeapon(weapon) {
-        weapons.push(weapon)
-        console.log(weapons)
-    }
-
     function saveGameState() {
-        localStorage.setItem('gameState', JSON.stringify(weapons))
+        let weaponString = JSON.stringify(weapons)
+        localStorage.setItem('weapons', weaponString)    
     }
 
     function loadGameState() {
-        const saveGameState = localStorage.getItem('gameState')
-        if(saveGameState) {
-            weapons.length = 0
-            weapons.push(...JSON.parse(saveGameState))
+        let weaponString = localStorage.getItem('weapons')
+        if(weaponString) {
+            weapons = JSON.parse(weaponString)
         }
     }
 
@@ -92,5 +91,3 @@
         localStorage.removeItem('gameState')
         weapons.length = 0
     }
-
-})
