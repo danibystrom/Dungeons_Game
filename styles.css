@@ -9,7 +9,7 @@
             overflow: hidden;
         }
 
-        #start, #first-room, #sword-room, #slingshot-room, #winning-room, #loosing-room {
+        #start, #first-room, #sword-room, #slingshot-room, #winning-room, #loosing-room, #leave-room {
             background-color: black;
             position: fixed;
             top: 0;
@@ -18,7 +18,7 @@
             height: 100%;
         }
 
-        #start iframe, #first-room iframe, #sword-room iframe, #slingshot-room iframe, #winning-room iframe, #loosing-room iframe {
+        #start iframe, #first-room iframe, #sword-room iframe, #slingshot-room iframe, #winning-room iframe, #loosing-room iframe, #leave-room iframe {
             width: 100%;
             height: 100%;
             position: absolute;
@@ -35,6 +35,11 @@
             border-radius: 5%;
             font-size: large;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            
+        }
+
+        button:hover {
+            cursor: pointer;
         }
 
         button.sword-image {

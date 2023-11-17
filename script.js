@@ -4,6 +4,7 @@
     const leave = document.getElementById('leave')
 
     const firstRoom = document.getElementById('first-room')
+    const leaveRoom = document.getElementById('leave-room')
     const sword = document.getElementById('sword')
     const slingshot = document.getElementById('slingshot')
     let weapons = []
@@ -31,10 +32,9 @@
     })
 
     leave.addEventListener('click', function() {
-        start.innerHTML = '<h1>Du har avslutat spelet</h1>'
-        result.innerHTML = "We're sad to see you go... Tack för att du urforskade Dungeons!"
-        document.body.style.backgroundImage = "url('/images/toothless.jpg')"
-    })
+        firstRoom.style.display = 'none';
+        leaveRoom.style.display = 'block';
+    });
 
     sword.addEventListener('click', function() {
         firstRoom.style.display = 'none'
